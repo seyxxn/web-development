@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>색 테이블 만들기</title>
     <style>
-        #brown{
-            background-color: #A52A2A;
-        }
+        #brown{ background-color: #A52A2A; width: 60px;}
+        #DeepSkyBlue{background-color: #00BFFF;width: 60px;}
+        #Blueviolet{background-color:#8A2BE2;width: 60px;}
+        #Gold{background-color:#FFD700;width: 60px;}
+        #DarkOrange{background-color:#FF8C00;width: 60px;}
+        #OliveDrab{background-color:#6B8E23;width: 60px;}
     </style>
 </head>
 <body>
@@ -14,36 +17,23 @@
     <hr>
     <table border="1">
         <thead>
-            <tr>
-                <th>이름</th><th>코드</th><th>색</th><th>이름</th><th>코드</th><th>색</th>
-            </tr>
+            <tr><th>이름</th><th>코드</th><th>색</th><th>이름</th><th>코드</th><th>색</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>Brown</td>
-                <td>#A52A2A</td>
-                <td bgcolor="#A52A2A" width="60"></td>
-                <td>DeepSkyBlue</td>
-                <td>#00BFFF</td>
-                <td bgcolor="#00BFFF"  width="60"></td>
+                <td>Brown</td><td>#A52A2A</td><td id="brown"></td>
+                <td>DeepSkyBlue</td><td>#00BFFF</td><td id="DeepSkyBlue"></td>
             </tr>
             <tr>
-                <td>Blueviolet</td>
-                <td>#8A2BE2</td>
-                <td bgcolor="#8A2BE2"  width="60"></td>
-                <td>Gold</td>
-                <td>#FFD700</td>
-                <td bgcolor="#FFD700"  width="60"></td>
+                <td>Blueviolet</td><td>#8A2BE2</td><td id="Blueviolet"></td>
+                <td>Gold</td><td>#FFD700</td><td id="Gold"></td>
             </tr>
             <tr>
-                <td>DarkOrange</td>
-                <td>#FF8C00</td>
-                <td bgcolor="#FF8C00"  width="60"></td>
-                <td>OliveDrab</td>
-                <td>#6B8E23</td>
-                <td bgcolor="#6B8E23"  width="60"></td>
+                <td>DarkOrange</td><td>#FF8C00</td><td id="DarkOrange" ></td>
+                <td>OliveDrab</td><td>#6B8E23</td><td id="OliveDrab"></td>
             </tr>
         </tbody>
     </table>
 </body>
 </html>
+
