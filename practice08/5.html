@@ -15,17 +15,16 @@
         <img src="spade-3.png" width="100" height="140" alt="스페이드3">
         <img src="spade-7.png" width="100" height="140" alt="스페이드7" >
     </div>
+
     <script>
         var cardArray = document.getElementsByTagName("img");
         for(var i = 0 ; i < cardArray.length; i++){
             var card = cardArray[i];
             card.style.zIndex = i;
-            card.style.left = "10px";
-            card.style.right = "20px";
             card.onclick = shuffle;
         }
         function shuffle() {
-            for(var i =0; i < cardArray.length; i ++){
+            for(var i =0; i < cardArray.length; i++){
                 var card = cardArray[i];
                 card.style.zIndex++;
                 card.style.zIndex = card.style.zIndex % cardArray.length;
@@ -33,5 +32,6 @@
         }
         
     </script>
+
 </body>
 </html>

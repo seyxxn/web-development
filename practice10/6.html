@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>setInterval</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 7em;
+            border: 1px solid gray;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h3>div 태그에 시계 만들기</h3>
+    <p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.</p>
+    <hr>
+    <div id = "div">  
+    </div>
+    <script>
+        var divID = document.getElementById("div");
+        var clickNum = 0;
+        var timerID = setInterval("load()", 200);
+
+        div.onclick = function(){
+            if(clickNum == 1){
+                divID.style.color = "black";
+                timerID = setInterval("load()", 200);
+                clickNum = 0;
+            }else {
+                divID.style.color = "gray";
+                clearInterval(timerID);
+                clickNum = 1;
+            }
+        }
+        
+        function load(){
+            var time = new Date().toLocaleTimeString();
+            document.getElementById("div").innerHTML = time;
+        }
+
+    </script>
+</body>
+</html>

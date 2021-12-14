@@ -3,19 +3,21 @@
 <head>
     <title>onmouseover 과 onmouseout</title>
     <script>
-    var text=["빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다",
-            "철학책과 문학 작품 30권씩 읽기",
-            "수영 2시간, 달리기 10km씩, 싸이클 20km씩 꾸준히",
-            "개발자 커뮤니티등을 참고하며 자바스크립트 공부하기"];
-    var textDiv;
+    var text
+    =["빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다",
+    "철학책과 문학 작품 30권씩 읽기",
+    "수영 2시간, 달리기 10km씩, 싸이클 20km씩 꾸준히",
+    "개발자 커뮤니티등을 참고하며 자바스크립트 공부하기"];
+    var textDiv; //반드시 함수 바깥에
     function init() {
         textDiv = document.getElementById("textDiv");	
         var liArray = document.getElementsByTagName("li");
         for(i=0; i<liArray.length; ++i) {
-            liArray[i].onmouseover=over;
-		    liArray[i].onmouseout=hide;
+            liArray[i].onmouseover=over; // 함수 호출
+		    liArray[i].onmouseout=hide; // 함수 호출
 	    }
     }
+
     function over(e) {
 	    var n=0;
 	    switch(e.target.id) {
@@ -30,6 +32,7 @@
 	    }
 	    settextDiv(text[n], e);	
     }
+
     function settextDiv(text, e) {
 	    textDiv.innerHTML = text;
         textDiv.style.border = "1px solid green";
@@ -40,21 +43,26 @@
 	    textDiv.style.width = "150px";
 	    textDiv.style.height = "100px";
     }
+    
     function hide() {
 	    textDiv.style.visibility = "hidden";
     }
 </script>
+
 </head>
 <body onload="init()">
 <h3>아이템에 마우스를 올리면 설명 출력</h3>
 <hr>
 <p>여름 방학 때 하고 싶은 것들</p>
+
 <ul>
 	<li id="0">자전거로 대한민국 일주</li>
 	<li id="1">책 100권 읽기</li>
 	<li id="2">철인 3종 경기 준비</li>
 	<li id="3">자바스크립트 정복</li>
 </ul> 
+
 <div id="textDiv" style="position:absolute"></div>
+
 </body>
 </html>

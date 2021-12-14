@@ -11,11 +11,12 @@
 <script>
     var width = 150;
     var height = 100;
+
     function wheel(e) {
         if(e.wheelDelta > 0) {
             width=width-(width*0.05);
             height=height-(height*0.05);
-            if(width<0 || height <0) {
+            if(width <= 0 || height <= 0) {
                 width = 0;
                 height = 0;
             }
@@ -24,7 +25,8 @@
             width=width + (width*0.05);
             height=height + (height*0.05);
         }
-        document.getElementById("img").style.width= width+"px";
+
+        document.getElementById("img").style.width = width+"px";
         document.getElementById("img").style.height = height + "px";
     }
 </script>

@@ -3,19 +3,21 @@
     <title>DOM 객체 동적 삽입</title>
     <script>
         function addAnswer(obj, text){
-            if(obj.sw!=1) {
+            var check = 0;
+            if(obj.check !=1) {
                 var p = document.createElement("p");
                 p.innerHTML = text;
                 obj.parentElement.appendChild(p);
-                obj.sw=1;
+                obj.check = 1;
             }
-            p.onclick=function () {
+            p.onclick = function () {
                 this.parentElement.removeChild(this);
-                obj.sw=0;
+                obj.check = 0;
             }
         }
     </script>
 </head>
+
 <body>
     <h3>정답의 동적 삽입</h3>
     <hr>

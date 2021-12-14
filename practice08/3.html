@@ -10,13 +10,21 @@
     <script>
         function change() {
             var spanTags = document.getElementsByTagName("span");
-            
+            for(var i = 0; i < spanTags.length; i++){
+                var span = spanTags[i];
+                var value = span.style.visibility;
+                if (value == "hidden")
+                    span.style.visibility = "visible";
+                else 
+                    span.style.visibility = "hidden";
+                }
         }
     </script>
 </head>
+
 <body>
     <h3>다음 빈 곳에 숨은 단어? 
-        <input type="button" value="show/hide" onclick="change()">
+        <button onclick="change()">show/hide</button>
     </h3>
     <hr>
     <ul>
